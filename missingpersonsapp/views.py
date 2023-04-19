@@ -76,10 +76,3 @@ def searchmissingpersonsPageView(request):
         "message": error_message
         }
     return render(request, 'missingpersonsapp/viewmissingpersons.html', context)
-
-    # if data.count() > 0:
-    #     context = {"missing_persons": data}
-    #     return render(request, 'missingpersonsapp/viewmissingpersons.html', context)
-    # else:
-    #     context = {"error": "Not found"}
-    #     return render(request, 'missingpersonsapp/viewmissingpersons.html', context)

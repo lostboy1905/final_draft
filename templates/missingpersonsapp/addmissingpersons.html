@@ -1,16 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-{% comment %} <header class="masthead">
-    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-        <div class="d-flex justify-content-center">
-            <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">Human Trafficking</h1>
-            </div>
-        </div>
-    </div>
-</header>
-<body style="background-color: black;"> {% endcomment %}
     <form name="form" method="post" action="{% url 'addpersons' %}">
         <fieldset style="background-color: white;">
             <legend>Add A Missing Person</legend>
