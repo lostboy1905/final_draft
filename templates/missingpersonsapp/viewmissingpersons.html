@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% comment %} <header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center"> 
+<br>
+<br>
+<br> 
+<br> 
+<br> 
+<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<body> {% endcomment %}
+<table class="table table-bordered table-hover table-condensed text-white">
+    <thead>
+        <tr>
+            <th title="Field #1"><strong>Date Missing</strong></th>
+            <th title="Field #2"><strong>First Name</strong></th>
+            <th title="Field #3"><strong>Last Name</strong></th>
+            <th title="Field #4"><strong>Age at Date Missing</strong></th>
+            <th title="Field #5"><strong>City</strong></th>
+            <th title="Field #6"><strong>State</strong></th>
+            <th title="Field #7"><strong>Gender</strong></th>
+            <th title="Field #8"><strong>Race</strong></th>
+            <th title="Field #9"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for person in missing_persons %}
+        <tr>
+            <td>{{person.Date_Missing}}</td>
+            <td>{{person.First_Name}}</td>
+            <td>{{person.Last_Name}}</td>
+            <td>{{person.age_at_missing}}</td>
+            <td>{{person.city}}</td>
+            <td>{{person.state}}</td>
+            <td>{{person.gender}}</td>
+            <td>{{person.race}}</td>
+            <td><a href="{% url 'editpersons' sFirstName=person.First_Name %}">Edit</a>
+        </tr>
+        {% endfor%}
+        {{message}}
+    </tbody>
+</table>
+{% endblock %}

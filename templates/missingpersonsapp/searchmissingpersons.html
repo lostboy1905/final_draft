@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- <header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center"> -->
+<form name="form" method="get" action="{% url 'searchpersons' %}">
+    <label for='firstName'>Enter the first name:</label>
+    <input type="text" name='firstName' id='firstName'>
+    <br><br>
+    <label for='lastName'>Enter the last name:</label>
+    <input type="text" name='lastName' id='lastName'>
+    <br><br>
+    <button type="submit">Search</button>
+</form>
+{% endblock %}
